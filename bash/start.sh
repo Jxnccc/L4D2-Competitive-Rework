@@ -17,7 +17,7 @@ if screen -list | grep -P "\d+\.$port"; then
 fi
 
 # Command to start the server
-command="/home/l4d2server/steam/l4d2/srcds_run -game left4dead2 -port $port +sv_clockcorrection_msecs 25 -timeout 10 -tickrate 100 +map $map -maxplayers 32 +servercfgfile server.cfg"
+command="/home/l4d2server/serverfiles/srcds_run -game left4dead2 -port $port +sv_clockcorrection_msecs 25 -timeout 10 -tickrate 100 +map $map -maxplayers 32 +servercfgfile server.cfg"
 
 # Start the screen with the command
 screen -d -m -S "$port" $command
